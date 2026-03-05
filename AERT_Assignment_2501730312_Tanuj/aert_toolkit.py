@@ -32,16 +32,14 @@ binary_search_trace_stack = StackADT()
 def factorial(n):
     """Recursive factorial, handles n >= 0."""
     if n < 0:
-        # invalid input
+
         return None
-    # base case
+    
     if n == 0:
         return 1
-    # recursive case
+   
     return n * factorial(n - 1)
 
-
-# global counters for fibonacci
 naive_calls = 0
 memo_calls = 0
 
@@ -96,7 +94,6 @@ def binary_search(arr, key, low, high):
 
     mid = (low + high) // 2
 
-    # store mid index in stack trace
     binary_search_trace_stack.push(mid)
 
     if arr[mid] == key:
@@ -107,11 +104,11 @@ def binary_search(arr, key, low, high):
         return binary_search(arr, key, mid + 1, high)
 
 
-# ---------- Helper to run test cases ----------
 
 def test_factorial():
     print("Factorial Test Cases:")
     for n in [0, 1, 5, 10]:
+    
         result = factorial(n)
         print(f"factorial({n}) = {result}")
     print()
@@ -149,18 +146,18 @@ def test_binary_search():
 
     print("Array:", arr)
     for key in keys:
-          # clear stack before each search
+          
         while not binary_search_trace_stack.is_empty():
             binary_search_trace_stack.pop()
 
         index = binary_search(arr, key, 0, len(arr) - 1)
         print(f"search {key} -> index {index}")
 
-        # print mid indices visited from stack
+       
         trace = []
         while not binary_search_trace_stack.is_empty():
             trace.append(binary_search_trace_stack.pop())
-        trace.reverse()  # because stack is LIFO
+        trace.reverse()  
         print("  mid indices visited:", trace)
 
     # empty array case
