@@ -104,7 +104,6 @@ def binary_search(arr, key, low, high):
         return binary_search(arr, key, mid + 1, high)
 
 
-
 def test_factorial():
     print("Factorial Test Cases:")
     for n in [0, 1, 5, 10]:
