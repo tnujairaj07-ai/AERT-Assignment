@@ -1,0 +1,36 @@
+Sorting Performance Analyzer (SPA)
+Correctness Check:
+Test list: [5, 2, 9, 1, 5, 6]
+Insertion Sort: [1, 2, 5, 5, 6, 9], OK = True
+Merge Sort: [1, 2, 5, 5, 6, 9], OK = True
+Quick Sort: [1, 2, 5, 5, 6, 9], OK = True
+
+Timing results (ms):
+Type       Size     Algorithm        Time (ms)
+random     1000     Insertion Sort      49.082
+random     1000     Merge Sort           3.927
+random     1000     Quick Sort           2.373
+sorted     1000     Insertion Sort       0.464
+sorted     1000     Merge Sort           4.286
+sorted     1000     Quick Sort          94.247
+reverse    1000     Insertion Sort      81.984
+reverse    1000     Merge Sort           3.202
+reverse    1000     Quick Sort          75.897
+random     5000     Insertion Sort    1333.766
+random     5000     Merge Sort          39.944
+random     5000     Quick Sort          13.446
+sorted     5000     Insertion Sort       2.642
+sorted     5000     Merge Sort          29.593
+sorted     5000     Quick Sort        2454.653
+reverse    5000     Insertion Sort    2598.479
+reverse    5000     Merge Sort          17.118
+reverse    5000     Quick Sort        1861.911
+random     10000    Insertion Sort    4928.144
+random     10000    Merge Sort          62.367
+random     10000    Quick Sort          33.326
+sorted     10000    Insertion Sort       3.198
+sorted     10000    Merge Sort          40.132
+sorted     10000    Quick Sort       10708.624
+reverse    10000    Insertion Sort   11875.628
+reverse    10000    Merge Sort          89.870
+reverse    10000    Quick Sort        9829.765
